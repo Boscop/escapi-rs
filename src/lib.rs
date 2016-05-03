@@ -71,6 +71,12 @@ impl Capture {
 	}
 }
 
+impl Drop for Capture {
+	fn drop(&mut self) {
+		self.stop();
+	}
+}
+
 fn ensure_initialized() {
 	unsafe {
 		if !INITIALIZED {
