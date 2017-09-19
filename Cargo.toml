@@ -4,4 +4,3 @@ version = "0.1.0"
 authors = ["Boscop <kingboscop@gmail.com>"]
 
 [dependencies]
-libc = "*"
