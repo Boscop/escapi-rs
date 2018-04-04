@@ -10,6 +10,9 @@ pub struct SimpleCapParams {
 	pub width: c_uint,
 	/* Buffer height */
 	pub height: c_uint,
+
+	/* Minimum framerate */
+	pub fps: c_float,
 }
 
 #[link(name = "escapi", kind = "dylib")]

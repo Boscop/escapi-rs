@@ -25,10 +25,10 @@ impl Capture {
 	}
 
 	/// creates a new Capture with the given size but doesn't start capturing yet
-	pub fn new(device_id: u32, width: u32, height: u32, buf: &mut [u32]) -> Capture {
+	pub fn new(device_id: u32, width: u32, height: u32, fps: u32, buf: &mut [u32]) -> Capture {
 		assert_eq!(buf.len() as u32, width * height);
 		Capture {
-			params: SimpleCapParams { buf: buf.as_mut_ptr(), width, height },
+			params: SimpleCapParams { buf: buf.as_mut_ptr(), width, height, fps: fps as _ },
 			device_id: device_id
 		}
 	}
